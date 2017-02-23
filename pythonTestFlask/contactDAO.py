@@ -6,12 +6,15 @@ class ContactDAO:
 
 	def __init__(self):
 		"""Class constructor"""
+		pass
 
 	def create(self, contact):
 		"""Validate current object state"""
-        con = db()
-        query = 'INSERT INTO contact (firstname, lastname, email, address, phone) VALUES (?, ?, ?, ?, ?);'
-        params = [contact.firstName, contact.lastName, contact.email, contact.address, contact.phone]
-        result = con.executeSQL(query, params)
+		result = False
 
-        return result
+		con = db()
+		query = 'INSERT INTO contact (firstname, lastname, email, address, phone) VALUES (?, ?, ?, ?, ?);'
+		params = [contact.firstName, contact.lastName, contact.email, contact.address, contact.phone]
+		result = con.executeSQL(query, params)
+
+		return result
