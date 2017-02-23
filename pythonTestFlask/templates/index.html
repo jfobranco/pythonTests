@@ -1,0 +1,36 @@
+<!doctype html>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+
+<title>Contacts</title>
+Home  <a href="file">File upload</a>  <a href="list">List</a>
+<br/><br/>
+<form method="post">
+	<fieldset>
+	    <legend>New Contact</legend>
+		<label for="firstName">First Name:</label><input type="text" name="firstName" value="{{ contact.firstName }}"><span class="error"> *</span><br>
+		<span class="error">{{ contact.errors.firstName }}</span>
+		<br>
+		<label for="lastName">Last Name:</label><input type="text" name="lastName" value="{{ contact.lastName }}"><span class="error"> *</span><br>
+		<span class="error">{{ contact.errors.lastName }}</span>
+		<br>
+		<label for="email">Email:</label><input type="text" name="email" value="{{ contact.email }}"><span class="error"> *</span><br>
+		<span class="error">{{ contact.errors.email }}</span>
+		<br>
+		<label for="address">Address:</label><input type="text" name="address" value="{{ contact.address }}"><br>
+		<span class="error">{{ contact.errors.address }}</span>
+		<br>
+		<label for="phone">Phone:</label><input type="text" name="phone" value="{{ contact.phone }}"><br>
+		<span class="error">{{ contact.errors.phone }}</span>
+		<br>
+
+		<span class="ok"><?php echo $message;?></span>
+		<br>
+		<input type="submit" name="submit" value="Submit">
+	</fieldset>
+</form>
+
+{% if name %}
+  <h1>Hello {{ name }}!</h1>
+{% else %}
+  <h1>Hello, World!</h1>
+{% endif %}

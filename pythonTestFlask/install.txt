@@ -1,0 +1,32 @@
+jinja templates are used
+
+http://flask.pocoo.org/docs/0.12/installation/
+http://stackoverflow.com/questions/17271319/how-to-install-pip-on-macos-os-x
+
+sudo easy_install pip
+sudo pip install virtualenv
+cd /Users/jfobranco/Desktop/pythonTestFlask
+virtualenv venv
+activate venv:
+	. venv/bin/activate
+desactivate:
+	deactivate
+
+pip install Flask
+
+system wide flask install, no venv
+sudo pip install Flask
+
+to run an app, create a Python file and then:
+
+export FLASK_APP=hello.py
+flask run
+
+kill if needed
+ps ax | grep 'python'
+kill xxx
+http://stackoverflow.com/questions/16798111/how-to-find-kill-a-specific-python-program
+
+mysql need external driver:
+http://stackoverflow.com/questions/372885/how-do-i-connect-to-a-mysql-database-in-python
+used one from mysql site

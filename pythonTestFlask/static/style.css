@@ -1,0 +1,21 @@
+.error {color: #FF0000;}
+.ok {color: #fce016;text-align: center;}
+
+fieldset {
+	width: 400px;
+    padding: 10px;
+    border: 1px #ff474b solid;
+    margin: 10px;
+}
+
+form label {
+    float: left;
+    width: 150px;
+    margin: 3px 5px 0px 0px;
+    text-align: right;
+}
+
+form input {
+    margin: 3px 0px 0px 0px;
+    border: 1px #999 solid;
+}
